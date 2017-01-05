@@ -143,6 +143,8 @@ add_action( 'widgets_init', 'grvrocks2017_widgets_init' );
 function grvrocks2017_scripts() {
 	wp_enqueue_style( 'grvrocks2017-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'grvrocks2017-fonts', '//fontlibrary.org/face/cooper-hewitt' );
+
 	wp_enqueue_script( 'grvrocks2017-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'grvrocks2017-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );

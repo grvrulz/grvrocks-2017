@@ -113,6 +113,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "layout/layout";
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+@import "sections/masthead";
+
+/*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
 @import "sections/comments";
