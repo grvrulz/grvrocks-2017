@@ -1,7 +1,7 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
+	float: none;
 	width: 100%;
 
 	ul {
@@ -46,11 +46,13 @@
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
+			top: 2em;
 		}
 	}
 
 	li {
 		float: left;
+		display: inline-block;
 		position: relative;
 
 		&:hover > a,
@@ -61,6 +63,12 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: $color__text-light;
+		padding: 10px 8px;
+
+		&:visited {
+			color: $color__text-light;
+		}
 	}
 
 	.current_page_item > a,
@@ -88,5 +96,11 @@
 	}
 	.main-navigation ul {
 		display: block;
+		text-align: center;
+
+		li {
+			float: none;
+			text-align: center;
+		}
 	}
 }
