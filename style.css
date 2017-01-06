@@ -587,8 +587,12 @@ table {
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 40px 30px 40px 40px;
+  background: #fefefe;
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 1px 2px 0 rgba(0, 0, 0, 0.1), 1px 0 2px 0 rgba(0, 0, 0, 0.1); }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
@@ -711,7 +715,7 @@ body {
 .hentry {
   margin: 0 0 1.5em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1); }
+  box-shadow: inset 2px 1px 2px 0 rgba(0, 0, 0, 0.1), 1px 0 2px 0 rgba(0, 0, 0, 0.1); }
 
 .byline,
 .updated:not(.published) {
@@ -781,9 +785,14 @@ body {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
+  padding: 10px 40px 0;
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
+  .widget ul, .widget ol {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
