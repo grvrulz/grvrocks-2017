@@ -670,7 +670,7 @@ body {
 .site {
   max-width: 940px;
   margin: 40px auto;
-  background: #fefefe;
+  background: #eeeeee;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 0 12px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -686,8 +686,7 @@ body {
   .site-content .widget-area {
     float: right;
     overflow: hidden;
-    width: 28%;
-    background: #eeeeee; }
+    width: 28%; }
   .site-footer {
     clear: both;
     width: 100%; } }
@@ -710,7 +709,9 @@ body {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1); }
 
 .byline,
 .updated:not(.published) {
@@ -736,7 +737,9 @@ body {
 ## Common
 --------------------------------------------------------------*/
 .hentry {
-  padding: 0 30px 20px 40px; }
+  padding: 40px 30px 60px 40px;
+  background: #fefefe;
+  margin: 0; }
 
 .site-footer {
   background-color: rgba(240, 240, 240, 0.8);
