@@ -434,32 +434,31 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  background-color: #424254;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  background: #424254;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
+  color: #f2f2f2;
+  cursor: pointer;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 12px 20px 8px;
+  text-transform: uppercase;
+  width: auto;
+  white-space: nowrap; }
+  button:hover, button:active, button:focus,
   input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
+  input[type="reset"]:hover,
   input[type="reset"]:active,
   input[type="reset"]:focus,
+  input[type="submit"]:hover,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+    background-color: #cc2a41;
+    color: #f2f2f2; }
 
 /*--------------------------------------------------------------
 # Formattings
@@ -645,11 +644,11 @@ table {
 # Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #555555; }
   a:visited {
-    color: purple; }
+    color: #666; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #666; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -713,7 +712,7 @@ body {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: inset 2px 1px 2px 0 rgba(0, 0, 0, 0.1), 1px 0 2px 0 rgba(0, 0, 0, 0.1); }
 
@@ -741,7 +740,7 @@ body {
 ## Common
 --------------------------------------------------------------*/
 .hentry {
-  padding: 40px 30px 60px 40px;
+  padding: 30px 30px 60px 40px;
   background: #fefefe;
   margin: 0; }
 
@@ -785,14 +784,23 @@ body {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
-  padding: 10px 40px 0;
+  padding: 10px 32px 0;
   /* Make sure select elements fit in widgets. */ }
+  .widget .widget-title {
+    font-size: 22.4px;
+    font-size: 1.4rem;
+    margin: 0; }
   .widget select {
     max-width: 100%; }
   .widget ul, .widget ol {
     margin: 0;
     padding: 0;
     list-style: none; }
+  .widget li {
+    padding: 6px 0;
+    border-bottom: 1px dotted #555555; }
+    .widget li a {
+      text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
