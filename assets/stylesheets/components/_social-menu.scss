@@ -1,0 +1,54 @@
+.jetpack-social-navigation {
+  a {
+    margin: 0 3px;
+
+    &::before {
+  		content: '\f476';
+      color: #f2f2f2;
+      border-radius: 50%;
+      padding: 6px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.05));
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07), inset 0 1px 0 0 rgba(255, 255, 255, 0.30), inset 0 -1px 0 0 rgba(255, 255, 255, 0.10), 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: 0.2s all ease-in-out;
+      display: inline !important;
+  	}
+
+  	&[href*="facebook.com"]::before {
+  		content: '\f204' !important;
+  		background-color: #3b5998;
+  	}
+
+  	&[href*="plus.google"]::before {
+  		content: '\f206';
+  		background-color: #dd4b39;
+  	}
+
+  	&[href*="twitter"]::before {
+  		content: '\f202';
+  		background-color: #00aced;
+  	}
+
+  	&[href*="github"]::before {
+  		content: '\f200';
+  		background-color: #171516;
+  	}
+
+  	&[href*="youtube"]::before {
+  		content: '\f213';
+  		background-color: #bb0000;
+  	}
+
+  	&[href*="linkedin"]::before {
+  		content: '\f207';
+  		background-color: #007bb6;
+  	}
+
+
+    &:hover::before {
+      opacity: 0.8;
+    }
+
+  }
+}

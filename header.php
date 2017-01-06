@@ -32,7 +32,5 @@
 
 		<?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
 
-		<?php grvrocks2017_social_menu(); ?>
-
 	</header>
 	<div id="content" class="site-content">
