@@ -421,10 +421,10 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-  padding: 3px; }
+  padding: 12px 8px 8px; }
 
 textarea {
-  padding-left: 3px;
+  padding-left: 8px;
   width: 100%; }
 
 /*--------------------------------------------------------------
@@ -484,7 +484,8 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em; }
+  margin-left: 0;
+  padding-left: 0; }
 
 dt {
   font-weight: bold; }
