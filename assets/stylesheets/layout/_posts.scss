@@ -4,12 +4,16 @@
 
 .hentry {
 	margin: 0;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-	box-shadow: inset 2px 1px 2px 0 rgba(0,0,0,0.1),
-							1px 0 2px 0 rgba(0,0,0,0.1);
+
+
+	.entry-header,
+	.entry-footer,
+	.entry-content {
+
+	}
+
 }
 
-.byline,
 .updated:not(.published){
 	display: none;
 }
@@ -19,8 +23,16 @@
 	display: inline;
 }
 
+.entry-title {
+	margin-bottom: 4px;
+}
+
+.entry-meta {
+	@include font-size(0.9);
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
 }

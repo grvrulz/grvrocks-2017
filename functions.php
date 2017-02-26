@@ -55,10 +55,11 @@ function grvrocks2017_setup() {
 	 * Add support for core custom logo.
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 200,
-		'width'       => 200,
+		'height'      => 100,
+		'width'       => 100,
 		'flex-width'  => true,
 		'flex-height' => true,
+		'header-text' => array( 'site-title', 'site-description' ),
 	) );
 
 	/*
@@ -87,10 +88,7 @@ function grvrocks2017_setup() {
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'grvrocks2017_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => get_template_directory_uri() .'/assets/images/bg.jpg',
-		'default-repeat'         => 'no-repeat',
-		'default-position-x'     => 'center',
+		'default-color' => 'fefefe',
 	) ) );
 }
 endif;
@@ -127,15 +125,15 @@ function grvrocks2017_the_custom_logo() {
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function grvrocks2017_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'grvrocks2017' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	// register_sidebar( array(
+	// 	'name'          => esc_html__( 'Sidebar', 'grvrocks2017' ),
+	// 	'id'            => 'sidebar-1',
+	// 	'description'   => '',
+	// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</section>',
+	// 	'before_title'  => '<h2 class="widget-title">',
+	// 	'after_title'   => '</h2>',
+	// ) );
 }
 add_action( 'widgets_init', 'grvrocks2017_widgets_init' );
 
@@ -145,7 +143,7 @@ add_action( 'widgets_init', 'grvrocks2017_widgets_init' );
 function grvrocks2017_scripts() {
 	wp_enqueue_style( 'grvrocks2017-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'grvrocks2017-fonts', '//fontlibrary.org/face/cooper-hewitt' );
+	wp_enqueue_style( 'grvrocks2017-fonts', '//fontlibrary.org/face/clear-sans' );
 
 	wp_enqueue_script( 'grvrocks2017-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
