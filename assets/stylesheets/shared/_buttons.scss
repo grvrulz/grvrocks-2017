@@ -1,16 +1,17 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.button {
+	font-face: $font__regular;
 	background-color: $color__background-button;
 	border: 1px solid rgba(0,0,0,0.1);
 	border-radius: 3px;
-	color: $color__text-light;
+	color: $color__white;
 	cursor: pointer;
 	@include font-size(1);
-	font-weight: 400;
 	letter-spacing: 1px;
-	padding: 12px 20px 8px;
+	padding: 8px 16px;
 	text-transform: uppercase;
 	width: auto;
 	white-space: nowrap;

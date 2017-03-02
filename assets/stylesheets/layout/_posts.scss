@@ -3,8 +3,6 @@
 }
 
 .hentry {
-	margin: 0;
-
 
 	.entry-header,
 	.entry-footer,
@@ -29,6 +27,16 @@
 
 .entry-meta {
 	@include font-size(0.9);
+}
+
+.read-more {
+
+	margin-top: 10px;
+	a {
+		@include font-size(0.9);
+	}
+
+
 }
 
 .page-content,

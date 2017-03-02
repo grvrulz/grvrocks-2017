@@ -50,10 +50,15 @@ body {
 --------------------------------------------------------------*/
 
 .hentry {
-	padding: 4% 0;
+	padding: 4% 0 0;
 	background: $color__background-screen;
-	margin: 0;
+	margin: 0 0 100px;
 	border-bottom: 1px dotted $color__border-input;
+}
+
+.archive .hentry,
+.blog .hentry {
+	margin-bottom: 30px;
 }
 
 .site-footer {

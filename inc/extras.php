@@ -23,7 +23,7 @@ function grvrocks2017_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
-	
+
 	// Add a class of no-sidebar when there is no sidebar present
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-sidebar';
@@ -32,3 +32,18 @@ function grvrocks2017_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'grvrocks2017_body_classes' );
+
+
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function grvrocks2017_excerpt_more( $more ) {
+    return sprintf( '<p class="read-more"><a class="button" href="%1$s">%2$s</a></p>',
+        get_permalink( get_the_ID() ),
+        __( 'Continue Reading', 'grvwp2017' )
+    );
+}
+add_filter( 'excerpt_more', 'grvrocks2017_excerpt_more' );
