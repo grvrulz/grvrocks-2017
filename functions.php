@@ -197,3 +197,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load files from Hybrid framework.
+ */
+require get_template_directory() . '/inc/hybrid-media-grabber.php';
+require get_template_directory() . '/inc/get-the-image.php';

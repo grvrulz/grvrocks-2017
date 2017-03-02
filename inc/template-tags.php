@@ -29,12 +29,23 @@ function grvrocks2017_posted_on() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+
+}
+endif;
+
+if ( ! function_exists( 'grvrocks2017_posted_by' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function grvrocks2017_posted_by() {
+
 	$byline = sprintf(
 		esc_html_x( '%s', 'post author', 'grvrocks2017' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="byline"> ' . $byline . '</span><span class="posted-on"> — ' . $posted_on . '</span>'; // WPCS: XSS OK.
+	echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
@@ -65,15 +76,6 @@ function grvrocks2017_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'grvrocks2017' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
 }
 endif;
 
@@ -119,3 +121,35 @@ function grvrocks2017_category_transient_flusher() {
 }
 add_action( 'edit_category', 'grvrocks2017_category_transient_flusher' );
 add_action( 'save_post',     'grvrocks2017_category_transient_flusher' );
+
+
+
+/* Functions picked from Hybrid framework
+ * © Justin Tadlock
+ * https://github.com/justintadlock/hybrid-core/blob/d3a35215a601474d16c6f65ff1ada12b2dbc2217/inc/template-post.php
+ *
+ */
+
+ /**
+ * Outputs a link to the post format archive.
+ *
+ * @since  2.0.0
+ * @access public
+ * @return void
+ */
+function hybrid_post_format_link() {
+	echo hybrid_get_post_format_link();
+}
+/**
+ * Generates a link to the current post format's archive.  If the post doesn't have a post format, the link
+ * will go to the post permalink.
+ *
+ * @since  2.0.0
+ * @access public
+ * @return string
+ */
+function hybrid_get_post_format_link() {
+	$format = get_post_format();
+	$url    = $format ? get_post_format_link( $format ) : get_permalink();
+	return sprintf( '<a href="%s" class="post-format-link">%s</a>', esc_url( $url ), get_post_format_string( $format ) );
+}

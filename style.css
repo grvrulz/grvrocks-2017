@@ -713,6 +713,12 @@ body {
 .entry-summary {
   margin: 1em 0 0; }
 
+.cat-links,
+.tag-links {
+  display: block;
+  clear: both;
+  margin-top: 5px; }
+
 /*--------------------------------------------------------------
 ## Pages
 --------------------------------------------------------------*/
@@ -752,7 +758,7 @@ body {
 ## Common
 --------------------------------------------------------------*/
 .hentry {
-  padding: 4% 0 0;
+  padding: 4% 0;
   background: #fefefe;
   margin: 0 0 100px;
   border-bottom: 1px dotted #ccc; }
