@@ -25,12 +25,14 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'grvrocks2017' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-container">
 
-		<?php get_template_part( 'components/header/site', 'branding' ); ?>
+			<?php get_template_part( 'components/header/site', 'branding' ); ?>
 
-		<?php grvrocks2017_the_custom_logo(); ?>
+			<?php grvrocks2017_the_custom_logo(); ?>
 
-		<?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
+			<?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
+		</div>
 
 	</header>
 	<div id="content" class="site-content">

@@ -1,10 +1,10 @@
 .main-navigation {
-	float: left;
-	margin-top: 10px;
+	float: right;
 	@include font-size(0.9)
 
 	ul {
 		display: none;
+		overflow: hidden;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -72,7 +72,7 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		color: $color__text-main;
-		padding: 0 12px 0 0 ;
+		padding: 12px ;
 
 		transition: 0.2s all ease-in-out;
 
@@ -94,6 +94,34 @@
 	display: block;
 }
 
+.menu-toggle {
+	float: right;
+}
+
+.main-navigation.toggled {
+	max-width: 100%;
+	ul {
+		position: absolute;
+		z-index: 99;
+		background: $color__background-body;
+		transition: all 1s ease;
+		right: 2%;
+		top: 72px;
+		box-shadow: 0 0 30px 20px rgba(0,0,0,0.15);
+		width: auto;
+		li,a {
+			float: none;
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		ul {
+			position: relative;
+		}
+
+	}
+}
+
 .menu-toggle:before {
 	content: "\2630";
 	display: inline-block;
@@ -101,16 +129,24 @@
 }
 
 @media screen and (min-width: #{$breakpoint_tablet}) {
+	.main-navigation {
+		float: left;
+	}
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: block;
 		text-align: left;
+		margin-top: 10px;
 
 		li {
 			float: none;
 			text-align: center;
+
+			a {
+				padding: 0 12px 0 0 ;
+			}
 		}
 	}
 }

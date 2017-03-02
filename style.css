@@ -508,12 +508,12 @@ table {
 # Navigation
 --------------------------------------------------------------*/
 .main-navigation {
-  float: left;
-  margin-top: 10px;
+  float: right;
   font-size: 14.4px;
   font-size: 0.9rem; }
   .main-navigation ul {
     display: none;
+    overflow: hidden;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -558,7 +558,7 @@ table {
     text-decoration: none;
     text-transform: uppercase;
     color: #555555;
-    padding: 0 12px 0 0;
+    padding: 12px;
     transition: 0.2s all ease-in-out; }
     .main-navigation a:visited {
       color: #555555; }
@@ -568,20 +568,47 @@ table {
 .main-navigation.toggled ul {
   display: block; }
 
+.menu-toggle {
+  float: right; }
+
+.main-navigation.toggled {
+  max-width: 100%; }
+  .main-navigation.toggled ul {
+    position: absolute;
+    z-index: 99;
+    background: #fefefe;
+    transition: all 1s ease;
+    right: 2%;
+    top: 72px;
+    box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.15);
+    width: auto; }
+    .main-navigation.toggled ul li, .main-navigation.toggled ul a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: center; }
+    .main-navigation.toggled ul ul {
+      position: relative; }
+
 .menu-toggle:before {
   content: "\2630";
   display: inline-block;
   margin-right: 5px; }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 50em) {
+  .main-navigation {
+    float: left; }
   .menu-toggle {
     display: none; }
   .main-navigation ul {
     display: block;
-    text-align: left; }
+    text-align: left;
+    margin-top: 10px; }
     .main-navigation ul li {
       float: none;
-      text-align: center; } }
+      text-align: center; }
+      .main-navigation ul li a {
+        padding: 0 12px 0 0; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -668,6 +695,10 @@ body {
 
 .site {
   overflow: hidden; }
+
+@media screen and (max-width: 37.5em) {
+  .site {
+    padding: 0 3%; } }
 
 /*--------------------------------------------------------------
 ## Single Column / No Active Sidebar
@@ -778,13 +809,16 @@ body {
 # Header
 --------------------------------------------------------------*/
 .site-header {
-  max-width: 100%;
-  width: 600px;
-  margin: 0 auto;
+  width: 100%;
   padding: 30px 0;
   color: #f2f2f2;
   text-align: left;
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #f2f2f2; }
+  .site-header .site-header-container {
+    max-width: 100%;
+    width: 600px;
+    margin: 0 auto; }
 
 .site-title {
   height: 0;
@@ -796,13 +830,23 @@ body {
 .custom-logo-link {
   float: left;
   height: 50px;
-  left: -80px;
-  position: absolute;
-  width: 50px; }
-  .custom-logo-link img {
-    position: fixed;
-    width: 50px;
-    height: 50px; }
+  width: 50px;
+  position: relative; }
+
+@media screen and (min-width: 50em) {
+  .site-header {
+    width: 600px;
+    margin: 0 auto; }
+  .custom-logo-link {
+    float: left;
+    height: 50px;
+    left: -80px;
+    position: absolute;
+    width: 50px; }
+    .custom-logo-link img {
+      position: fixed;
+      width: 50px;
+      height: 50px; } }
 
 /*--------------------------------------------------------------
 # Comments
