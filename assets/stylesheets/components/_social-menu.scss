@@ -6,7 +6,7 @@
   		content: '\f476';
       color: $color__text-screen;
       border-radius: 50%;
-      padding: 6px;
+      padding: 8px;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
       background: $color__background-body;
       // background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.05));
@@ -14,6 +14,7 @@
       // box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07), inset 0 1px 0 0 rgba(255, 255, 255, 0.30), inset 0 -1px 0 0 rgba(255, 255, 255, 0.10), 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       transition: 0.2s all ease-in-out;
       display: inline !important;
+      @include font-size(1.4);
   	}
 
   	&[href*="facebook.com"]::before {
@@ -49,6 +50,9 @@
 
     &:hover::before {
       opacity: 0.8;
+      margin-top: -8px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      transition: 0.2s all ease-in-out;
     }
 
   }

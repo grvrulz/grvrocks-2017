@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();
-				teh_post_thumbnail();
+
 				get_template_part( 'components/page/content', 'page' );
 
 				// If comments are open or we have at least one comment, load up the comment template.

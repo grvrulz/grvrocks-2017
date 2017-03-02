@@ -110,7 +110,7 @@ function grvrocks2017_setup() {
         'post'            => true, // enable or not the featured image check for single posts: true or false.
         'post-default'    => false, // the default setting of the featured image on single posts, if it's being displayed or not: true or false (only required if false).
         'page'            => true, // enable or not the featured image check for single pages: true or false.
-        'page-default'    => false, // the default setting of the featured image on single pages, if it's being displayed or not: true or false (only required if false).
+        'page-default'    => true, // the default setting of the featured image on single pages, if it's being displayed or not: true or false (only required if false).
     ),
 ) );
 }
