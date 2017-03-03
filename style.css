@@ -718,6 +718,19 @@ body {
 --------------------------------------------------------------*/
 .sticky {
   display: block; }
+  .sticky.hentry {
+    padding: 0;
+    margin: 50px auto; }
+  .sticky .entry-header {
+    padding: 40px 60px 0;
+    position: relative;
+    z-index: 1;
+    color: #212121; }
+  .sticky .entry-content {
+    padding: 0 60px 50px;
+    position: relative;
+    z-index: 1;
+    color: #212121; }
 
 .updated:not(.published) {
   display: none; }
@@ -742,13 +755,50 @@ body {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1em 0 0; }
+  margin: 1em 0; }
+
+.single .entry-content {
+  margin-bottom: 30px; }
 
 .cat-links,
 .tag-links {
   display: block;
   clear: both;
   margin-top: 5px; }
+
+.format-quote .entry-content {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 3px; }
+
+.format-quote blockquote {
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-family: "SortsMillGoudyTTItalic", serif;
+  position: relative;
+  margin: 0;
+  padding: 30px 20px 20px 68px; }
+  .format-quote blockquote:before {
+    content: "\201c";
+    font-size: 192px;
+    font-size: 12rem;
+    color: #666;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: -72px 0 0 -20px;
+    text-shadow: 0 4px 0 rgba(255, 255, 255, 0.9), 4px 0 0 rgba(255, 255, 255, 0.9), 0 -4px 0 rgba(255, 255, 255, 0.9), -4px 0 0 rgba(255, 255, 255, 0.9); }
+  .format-quote blockquote p {
+    margin: 0 0 10px; }
+  .format-quote blockquote cite {
+    font-size: 19.2px;
+    font-size: 1.2rem;
+    display: block;
+    font-family: "ClearSansLightRegular", sans-serif;
+    font-style: italic; }
+    .format-quote blockquote cite:before {
+      content: "\2015   "; }
 
 /*--------------------------------------------------------------
 ## Pages
@@ -757,31 +807,31 @@ body {
   clear: both;
   margin: 0 0 1.5em; }
 
-.hero-container {
+.hero-container, .sticky {
   position: relative;
   margin: 50px auto 100px;
   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25);
   overflow: hidden; }
 
-.hero-container img {
+.hero-container img, .sticky img {
   position: absolute;
   height: 100%;
   width: auto;
   min-width: 100%; }
 
-.hero-container .hero-content {
+.hero-container .hero-content, .sticky .hero-content {
   padding: 40px 60px 50px;
   position: relative;
   z-index: 1;
   color: #212121; }
 
-.hero-container h1 {
+.hero-container h1, .sticky h1 {
   margin: 0; }
 
-.hero-container p {
+.hero-container p, .sticky p {
   margin-top: 0;
   margin-bottom: 22px; }
-  .hero-container p:first-of-type {
+  .hero-container p:first-of-type, .sticky p:first-of-type {
     font-size: 22.4px;
     font-size: 1.4rem; }
 

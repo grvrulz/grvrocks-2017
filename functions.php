@@ -84,6 +84,8 @@ function grvrocks2017_setup() {
 		'video',
 		'quote',
 		'link',
+		'audio',
+		'gallery',
 	) );
 
 	// Set up the WordPress core custom background feature.
@@ -167,6 +169,7 @@ function grvrocks2017_scripts() {
 	wp_enqueue_style( 'grvrocks2017-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'grvrocks2017-fonts', '//fontlibrary.org/face/clear-sans' );
+	wp_enqueue_style( 'grvrocks2017-fonts-1', '//fontlibrary.org/face/sorts-mill-goudy' );
 
 	wp_enqueue_script( 'grvrocks2017-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
