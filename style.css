@@ -866,6 +866,8 @@ body {
   background: #fefefe;
   margin: 0 0 100px;
   border-bottom: 1px dotted #ccc; }
+  .hentry.single {
+    margin-bottom: 40px; }
 
 .archive .hentry,
 .blog .hentry {
