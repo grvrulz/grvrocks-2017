@@ -688,7 +688,7 @@ a {
   color: #555555;
   text-decoration: none; }
   a:visited {
-    color: #666; }
+    color: #555555; }
   a:hover, a:focus, a:active {
     color: #cc2a41; }
   a:focus {
