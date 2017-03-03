@@ -695,6 +695,8 @@ a {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
+  a.button:visited {
+    color: #f2f2f2; }
 
 /*--------------------------------------------------------------
 # Layout
