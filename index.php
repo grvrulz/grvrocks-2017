@@ -26,6 +26,16 @@ get_header(); ?>
 			<?php
 			endif;
 
+			if ( is_home() || is_blog() ) : ?>
+
+				<div class="hero-container">
+					<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+					<div class="hero-content">
+						<?php dynamic_sidebar('sidebar-2'); ?>
+					</div>
+				</div>
+			<?php endif;
+
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 

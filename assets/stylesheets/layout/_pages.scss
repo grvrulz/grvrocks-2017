@@ -10,31 +10,40 @@
 	margin: 50px auto 100px;
 	box-shadow: 0 20px 80px rgba(0,0,0,.25);
 	overflow: hidden;
-}
 
-.hero-container img {
-	position: absolute;
-	height: 100%;
-	width: auto;
-	min-width: 100%;
-}
-
-.hero-container .hero-content {
-	padding: 40px 60px 50px;
-	position: relative;
-	z-index: 1;
-	color: $color__text-screen;
-}
-
-.hero-container h1 {
-	margin: 0;
-}
-
-.hero-container p {
-	margin-top: 0;
-	margin-bottom: 22px;
-
-	&:first-of-type {
-		@include font-size(1.4);
+	img {
+		position: absolute;
+		height: 100%;
+		width: auto;
+		min-width: 100%;
 	}
+
+	.hero-content {
+		padding: 40px 60px 50px;
+		position: relative;
+		z-index: 1;
+		color: $color__text-screen;
+	}
+
+	.hero-container h1 {
+		margin: 0;
+	}
+
+	.hero-container p {
+		margin-top: 0;
+		margin-bottom: 22px;
+
+		&:first-of-type {
+			@include font-size(1.4);
+		}
+	}
+
+	.widget {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.blog .hero-container {
+	margin-bottom: 50px;
 }

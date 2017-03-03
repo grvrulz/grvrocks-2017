@@ -62,6 +62,11 @@ function grvrocks2017_setup() {
 		'header-text' => array( 'site-title', 'site-description' ),
 	) );
 
+	/**
+	 * Add support for custom header.
+	 */
+	add_theme_support( 'custom-header' ); 
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -159,6 +164,16 @@ function grvrocks2017_widgets_init() {
 	// 	'before_title'  => '<h2 class="widget-title">',
 	// 	'after_title'   => '</h2>',
 	// ) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Blog page', 'grvrocks2017' ),
+		'id'            => 'sidebar-2',
+		'description'   => 'Shows up on blog page, above all posts',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'grvrocks2017_widgets_init' );
 
