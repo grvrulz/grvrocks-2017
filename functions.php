@@ -49,6 +49,7 @@ function grvrocks2017_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Top', 'grvrocks2017' ),
+		'menu-2' => esc_html__( 'Footer', 'grvrocks2017' ),
 	) );
 
 	/**
@@ -65,7 +66,7 @@ function grvrocks2017_setup() {
 	/**
 	 * Add support for custom header.
 	 */
-	add_theme_support( 'custom-header' ); 
+	add_theme_support( 'custom-header' );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments

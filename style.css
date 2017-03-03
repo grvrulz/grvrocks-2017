@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Gaurav Pareek
 Theme URI: http://components.underscores.me/
@@ -662,6 +663,24 @@ table {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     transition: 0.2s all ease-in-out; }
 
+.footer-navigation ul {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  list-style: none; }
+  .footer-navigation ul li {
+    display: inline-block; }
+    .footer-navigation ul li:after {
+      content: "•";
+      padding-left: 5px;
+      display: inline; }
+    .footer-navigation ul li:last-of-type:after {
+      content: '';
+      padding: 0; }
+  .footer-navigation ul a {
+    padding: 5px;
+    display: inline-block; }
+
 /*--------------------------------------------------------------
 # Links
 --------------------------------------------------------------*/
@@ -969,8 +988,10 @@ object {
   max-width: 100%; }
 
 .wp-caption {
-  margin: 1em 0 1.5em;
-  max-width: 100%; }
+  margin: 2em 0 2.5em;
+  max-width: 100%;
+  padding: 8px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.2); }
   .wp-caption img[class*="wp-image-"] {
     display: block;
     margin-left: auto;
