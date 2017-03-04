@@ -312,13 +312,15 @@ input,
 select,
 textarea {
   color: #555555;
-  font-family: "ClearSansLightRegular", sans-serif;
+  font-family: "Overpass", sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.625; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  line-height: 1.2;
+  font-weight: 300; }
 
 p {
   margin-bottom: 1.5em; }
@@ -344,7 +346,7 @@ pre {
   padding: 1.6em; }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: Monaco, Consolas, "Droid Sans Mono", "Ubuntu Mono", "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem; }
 
@@ -436,7 +438,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-  font-face: "ClearSansMediumRegular", sans-serif;
+  font-face: "Overpass", sans-serif;
   background-color: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
@@ -816,7 +818,7 @@ body {
     font-size: 19.2px;
     font-size: 1.2rem;
     display: block;
-    font-family: "ClearSansLightRegular", sans-serif;
+    font-family: "Overpass", sans-serif;
     font-style: italic; }
     .format-quote blockquote cite:before {
       content: "\2015   "; }
